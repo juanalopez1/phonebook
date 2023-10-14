@@ -4,5 +4,6 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\PII_WhatsAppApiUCU\src\Library\Library.csproj" />
+    <ProjectReference Include="..\Library wpp\Library.csproj" />
   </ItemGroup>
 </Project>
