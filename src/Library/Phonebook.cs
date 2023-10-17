@@ -6,13 +6,13 @@ public class Phonebook
 {
     private List<Contact> persons;
 
+    public Contact Owner { get; }
+
     public Phonebook(Contact owner)
     {
         this.Owner = owner;
         this.persons = new List<Contact>();
     }
-
-    public Contact Owner { get; }
 
     public List<Contact> Search(string[] names)
     {
@@ -30,5 +30,16 @@ public class Phonebook
         }
 
         return result;
+    }
+
+    // agregamos addcontact por creator, la clase respeta open close ya que esta abierta a la extension.
+    public void AddContact(string name, string phone, string email)
+    {
+        persons.Add(new Contact(name, phone, email));
+    }
+
+    public void Remove(Contact contact)
+    {
+        persons.Remove(contact);
     }
 }
