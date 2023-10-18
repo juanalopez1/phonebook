@@ -5,7 +5,6 @@ namespace Library;
 public class Phonebook
 {
     private List<Contact> persons;
-
     public Contact Owner { get; }
 
     public Phonebook(Contact owner)
@@ -28,7 +27,6 @@ public class Phonebook
                 }
             }
         }
-
         return result;
     }
 
@@ -38,8 +36,13 @@ public class Phonebook
         persons.Add(new Contact(name, phone, email));
     }
 
-    public void Remove(Contact contact)
+    public void RemoveContact(Contact contact)
     {
         persons.Remove(contact);
+    }
+
+    public void SendMessage(string name, Message message)
+    {
+
     }
 }

@@ -1,13 +1,14 @@
-using System;
-using System.Net.Http;
-using System.Text.Json;
-using System.Threading.Tasks;
-using Twilio;
-using Twilio.Rest.Api.V2010.Account;
-using Nito.AsyncEx;
-
 namespace WhatsAppApiUCU
 {
+    using System;
+    using System.Net.Http;
+    using System.Text.Json;
+    using System.Threading.Tasks;
+    using Twilio;
+    using Twilio.Rest.Api.V2010.Account;
+    using Twilio.Types;
+    using Nito.AsyncEx;
+
     public class WhatsAppApi
     {
         private static bool initialized = false;
@@ -17,15 +18,15 @@ namespace WhatsAppApiUCU
         public WhatsAppApi()
         {
             if (!initialized)
-			{
-				AsyncContext.Run(InitializeAsync);
-				initialized = true;
-			}
+            {
+                Task.Run(InitializeAsync);
+                initialized = true;
+            }
         }
 
-		private static async Task InitializeAsync()
-		{
-			// HttpClient client = new HttpClient();
+        private static async Task InitializeAsync()
+        {
+            // HttpClient client = new HttpClient();
             // HttpResponseMessage response = await client.GetAsync(@"https://pii-secretsapiwebapp.azurewebsites.net/WhatsAppApiSecrets");
             // string result = await response.Content.ReadAsStringAsync();
             // WhatsAppApiSecrets secrets = JsonSerializer.Deserialize<WhatsAppApiSecrets>(result,
@@ -33,9 +34,9 @@ namespace WhatsAppApiUCU
 
             //accountSid = "ACa84013bd9cab881b4cf870d9aa762a3e";
             //authToken = "1078232165ded3e16a2065af7041ba8a";
-            accountSid = "ACa84013bd9cab881b4cf870d9aa762a3e";
-            authToken = "d7658b52096e1c783f1771dd847dc40b"; 
-		}
+            accountSid = "AC15b2ec36b1ad2cc3f9bd6cfd904dde0d";
+            authToken = "452a58c9b4d1c537c3d128a26c5073ee";
+        }
 
         public string Send(string to, string text)
         {
