@@ -3,8 +3,6 @@
     <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\PII_WhatsAppApiUCU\src\Library\Library.csproj" />
-    <ProjectReference Include="..\Library wpp\Library.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Twilio" Version="6.14.1" />
