@@ -41,8 +41,5 @@ public class Phonebook
         persons.Remove(contact);
     }
 
-    public void SendMessage(string name, Message message)
-    {
 
-    }
 }

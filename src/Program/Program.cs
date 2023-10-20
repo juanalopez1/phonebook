@@ -7,9 +7,14 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            // Crear el contacto dueño
+            Contact owner = new Contact("pablo", "+598 99747441", "pablo@gmail.com");
 
-            // Crear la lista de contactos
+            Phonebook list = new Phonebook(owner);
+
+            list.AddContact("belen", "+598 98770061", "mimail@gmail.com");
+            list.AddContact("markitos", "+598 91070442", "mimail@gmail.com");
+
+            WhatsAppChannel
 
             // Agregar contactos a la lista
 

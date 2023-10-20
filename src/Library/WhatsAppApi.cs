@@ -1,4 +1,4 @@
-namespace WhatsAppApiUCU
+namespace Library
 {
     using System;
     using System.Net.Http;
