@@ -7,7 +7,6 @@ namespace Library
     using Twilio;
     using Twilio.Rest.Api.V2010.Account;
     using Twilio.Types;
-    using Nito.AsyncEx;
 
     public class WhatsAppApi
     {
@@ -34,8 +33,8 @@ namespace Library
 
             //accountSid = "ACa84013bd9cab881b4cf870d9aa762a3e";
             //authToken = "1078232165ded3e16a2065af7041ba8a";
-            accountSid = "AC15b2ec36b1ad2cc3f9bd6cfd904dde0d";
-            authToken = "452a58c9b4d1c537c3d128a26c5073ee";
+            accountSid = "ACc7297ae9dab9d58baafad2de8bde5ced";
+            authToken = "ac39985e12d8e479d0de892b34fa0fce";
         }
 
         public string Send(string to, string text)
