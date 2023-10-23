@@ -34,7 +34,7 @@ namespace Library
             //accountSid = "ACa84013bd9cab881b4cf870d9aa762a3e";
             //authToken = "1078232165ded3e16a2065af7041ba8a";
             accountSid = "ACc7297ae9dab9d58baafad2de8bde5ced";
-            authToken = "0b3ccbadcf85c97d668450967759710a";
+            authToken = "8b3a9c57fbef50c26faf09436feea612";
         }
 
         public string Send(string to, string text)
