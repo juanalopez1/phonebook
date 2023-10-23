@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace Library;
 
-public class Phonebook
+public class Phonebook : IMessageChannel
 {
     private List<Contact> persons;
     public Contact Owner { get; }
@@ -41,5 +41,9 @@ public class Phonebook
         persons.Remove(contact);
     }
 
+    public void Send(Contact contact, Message message)
+    {
+        message.To = contact.Phone;
 
+    }
 }
