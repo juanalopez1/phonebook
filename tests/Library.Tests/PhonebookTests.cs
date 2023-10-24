@@ -21,4 +21,23 @@ public class PhonebookTests
         Assert.That(expected, Is.EqualTo(contacts.Count()));
     }
 
+    [Test]
+    public void CorrectSearch()
+    {
+        Contact owner = new Contact("Juan", "+59892230531", "juan.tanca@correo.ucu.edu.uy");
+        Phonebook list = new Phonebook(owner);
+
+        list.AddContact("Belu", "+59898770061", "vendomadera@correo.ucu.edu.uy");
+        list.AddContact("Juanita", "+59899747441", "juana.lopez@correo.ucu.edu.uy");
+
+        string[] namesList = new string[4];
+        namesList[0] = "Juanita";
+        namesList[1] = "Belu";
+
+        List<Contact> contacts = list.Search(namesList);
+
+        Assert.That(contacts[0].Name, Is.EqualTo(namesList[1]));
+        Assert.That(contacts[1].Name, Is.EqualTo(namesList[0]));
+    }
+
 }
